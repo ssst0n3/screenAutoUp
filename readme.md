@@ -12,9 +12,9 @@
 
 # 3. 使用方式
 脚本很简单， 见[github]()
-1. 注册七牛云账户，添加一个对象存储，记录一下存储空间名称以及测试域名（或者绑定自己的域名）
-2. 在密钥管理中记录一下AccessKey/SecretKey
-3. 下载源码，在config中，配置以下参数
+## 3.1 注册七牛云账户，添加一个对象存储，记录一下存储空间名称以及测试域名（或者绑定自己的域名）
+## 3.2 在密钥管理中记录一下AccessKey/SecretKey
+## 3.3 下载源码，在config中，配置以下参数
 ```
 # 密钥
 ACCESS_KEY = "***"
@@ -26,13 +26,14 @@ BUCKET_URL = "http://***.bkt.clouddn.com/"
 # 截图本地保存路径，请确保路径存在，且是绝对路径
 SCREEN_SHOT_PATH = "/home/{user}/{screen_shot_path}"
 ```
-4. 配置依赖环境
+## 3.4 配置依赖环境
 ```
 pip install pyperclip
 pip install qiniu
 ```
-5. 测试是否成功，如果一切没有问题的话，运行代码并截图后将返回外部链接，可以ctrl+v黏贴出来。我们再增加一个快捷键。
-6. 编译可执行文件
+## 3.5 测试是否成功
+如果一切没有问题的话，运行代码并截图后将返回外部链接，可以ctrl+v黏贴出来。我们再增加一个快捷键。
+## 3.6 编译可执行文件
 ```
 # 安装pyinstaller
 pip install pyinstaller
@@ -40,4 +41,5 @@ cd screenAutoUp
 pyinstaller -F main.py
 cp dist/screenAutoUp ~/bin/
 ```
-7. 现在可以通过`screenAutoUp`命令运行这个脚本，下面添加一下自己喜欢的键盘映射即可
+## 3.7 添加快捷键
+现在可以通过`screenAutoUp`命令运行这个脚本，下面添加一下自己喜欢的键盘映射即可
